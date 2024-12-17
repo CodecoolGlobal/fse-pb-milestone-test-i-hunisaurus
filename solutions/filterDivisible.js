@@ -8,7 +8,23 @@ Be mindful of division by 0. If the given number is 0 then return null.
 If the array is empty then it should return an empty array.
  */
 
+// let numbers = [1,2,3,4,5,6,7,8,9,10];
+// let divisor = 3;
+
 function filterDivisible(numbers, divisor) {
+    let arrayOfDivisibles = [];
+    if (numbers.length < 1){
+        return arrayOfDivisibles;
+    } else if (divisor === 0){
+        return null;
+    } 
+    
+    for (let number of numbers){
+        if ((number % divisor) === 0){
+            arrayOfDivisibles.push(number);
+        }
+    }
+    return arrayOfDivisibles;
 
 }
 
